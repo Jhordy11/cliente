@@ -17,7 +17,7 @@ export default function Pokedex() {
   function generarPokemon(idONombre) {
     setGif("https://media.tenor.com/5o2p0tH5LFQAAAAj/hug.gif");
      
-    axios.get(`/api/pokedex/${idONombre}`)
+    axios.get(`https://servidor-tau.vercel.app/api/pokedex/${idONombre}`)
       .then((objeto) => objeto.data)
       .then((pok) => {
         setPokemonNombre(pok.name.toUpperCase());
@@ -66,7 +66,7 @@ function alertar(name){
       );
       return;
     }
-    axios.get(`/api/gif/${name}`)
+    axios.get(`https://servidor-tau.vercel.app/api/gif/${name}`)
       .then((res) => res.data)
       .then((objeto) => setGif(objeto.data[0].images.original.url)).catch(err => console.log(err));
   }
@@ -79,7 +79,7 @@ function alertar(name){
     nav(`/pokedex/${numeroRandomPokemon()}`);
   }
 function handleBusqueda() {
-  axios.get(`/api/pokedex/${busqueda}`)
+  axios.get(`https://servidor-tau.vercel.app/api/pokedex/${busqueda}`)
       .then((objeto) => objeto.data)
       .then((pok) => {
         alertar(pok.name)

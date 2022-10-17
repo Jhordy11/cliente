@@ -15,7 +15,7 @@ export default function Weather() {
   const [hora, setHora] = useState("");
   function datos(lugar) {
     axios
-      .get(`/api/weather/${lugar}`)
+      .get(`https://servidor-tau.vercel.app/api/weather/${lugar}`)
       .then((data) => data.data)
       .then((objeto) => {
         setIcono(objeto.weather[0].icon);
@@ -59,7 +59,7 @@ export default function Weather() {
 
   function handelbutton() {
     axios
-      .get(`/api/weather/${lugar}`)
+      .get(`https://servidor-tau.vercel.app/api/weather/${lugar}`)
       .then((objeto) => objeto.data)
       .then((pok) => {
         alertar(pok.name);
