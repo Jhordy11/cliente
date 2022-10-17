@@ -83,7 +83,7 @@ export function CalculadoraContextoProvider(props) {
   function calcularResultado(value, a, b) {
     switch (value) {
       case "/":
-        return b != 0 ? Math.round((a * b) * 100) / 100: 0;
+        return b != 0 ? Math.round((a / b) * 100) / 100: 0;
       case "x":
         return Math.round((a * b) * 100) / 100;;
       case "-":

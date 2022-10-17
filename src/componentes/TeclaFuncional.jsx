@@ -19,7 +19,7 @@ export default function TeclaFuncional({valor}) {
             {valor}
         </button>
     }
-    if(valor =="+" || valor =="-" || valor =="x" || valor =="/"|| valor=="="){
+    if(["+","-","x","/","="].includes(valor)){
         return <button className="bg-orange-400/10 rounded-xl p-3 mm:p-8" onClick={(e)=>(selecionarOp(e.target.innerText))}>
             {valor}
         </button>
