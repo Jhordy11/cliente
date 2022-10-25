@@ -11,7 +11,7 @@ function App() {
   return (
     <div
       className="flex flex-col items-center justify-between mx-auto  h-screen font-pay bg-gradient-to-t from-p1 to-p1 via-p3 bg-size-500 animate-tt-bg
-     overflow-auto gap-10 mm:gap-0"
+      overflow-y-auto overflow-x-hidden gap-10 mm:gap-0"
     >
       <BrowserRouter>
         <Navegador />
